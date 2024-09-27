@@ -10,15 +10,9 @@ namespace DnDAPI.Models
         public Talent.Skills Skills { get; set; }
         public Talent.SavingThrows SavingThrows { get; set; }
         public MiscStats MiscStats { get; set; }
-        public string? CharacterName { get; set; }
-        public string? Class { get; set; }
-        public string? Background { get; set; }
-        public string? PlayerName { get; set; }
-        public string? Alignment { get; set; }
-        public string? Race { get; set; }
+        public MiscCharacterInfo MiscInfo { get; set; }
         public int? ExperiecePoints { get; set; }
         public Inventories Inventory { get; set; }
-
 
         public Character() { }
     }
@@ -26,7 +20,33 @@ namespace DnDAPI.Models
     public class Inventories
     {
         public Inventory.Currencies Money { get; set; }
-        public List<Inventory.Weapon> Weapons { get; set; }
+        public List<Inventory.Weapons> Weapons { get; set; }
+    }
+
+    public class MiscCharacterInfo
+    {
+        public string? CharacterName { get; set; }
+        public string? Class { get; set; }
+        public string? Background { get; set; }
+        public string? PlayerName { get; set; }
+        public string? Alignment { get; set; }
+        public string? Race { get; set; }
+        public string? Age { get; set; }
+        public string? Height { get; set; }
+        public string? Weight { get; set; }
+        public string? Eyes { get; set; }
+        public string? Skin { get; set; }
+        public string? Hair { get; set; }
+        public Byte[]? Appearance { get; set; }
+        public string? PersonalityTraits { get; set; }
+        public string? Ideals { get; set; }
+        public string? Bonds { get; set; }
+        public string? Flaws { get; set; }
+        public string? FeaturesAndTraits { get; set; }
+        public string? Treasure { get; set; }
+        public string? Backstory { get; set; }
+        public Dictionary<string, Byte[]?> OrganizationsAndSymbols { get; set; }
+        public List<string> LanguagesSpoken { get; set; }
     }
 
     public class MiscStats
@@ -47,7 +67,7 @@ namespace DnDAPI.Models
         public int Current { get; set; }
         public int Temporary { get; set; }
         public int HitDice { get; set; }
-        public Dice.Dices HitDiceSize { get; set; }
+        public Rolls.Dices HitDiceSize { get; set; }
     }
 
     public class DeathSaves

@@ -1,6 +1,6 @@
 ﻿namespace DnDAPI.Services
 {
-    public class Dice
+    public class Rolls
     {
         // TODO: add rolls to enum
         public enum Dices

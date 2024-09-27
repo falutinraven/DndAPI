@@ -4,11 +4,12 @@ namespace DnDAPI.Models
 {
     public class Inventory
     {
-        public class Weapon
+        public class Weapons
         {
+            public long Id { get; set; }
             public string Name { get; set; }
             public string DamageType { get; set; }
-            public Dice.Dices Dice { get; set; }
+            public Rolls.Dices Dice { get; set; }
             public int DiceQuantity { get; set; }
             public bool Ranged { get; set; }
             public bool Martial { get; set; }
