@@ -4,7 +4,7 @@ namespace DnDAPI.Models
 {
     public class Inventory
     {
-        public class Weapons
+        public class Weapon
         {
             public long Id { get; set; }
             public string Name { get; set; }
